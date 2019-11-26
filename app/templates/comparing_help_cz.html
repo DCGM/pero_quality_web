@@ -7,7 +7,16 @@
         <div class="jumbotron my-auto" style="width: max-content; background-color: floralwhite;">
             <div class="container" style="width: max-content;    min-width: 920px;">
                 <h2 style="text-align: -webkit-center;">Porovnávání</h2>
-                <p style="text-align: -webkit-center;">{{set_obj.question_cz}} Můžeš použít klávesové zkratky, ↑ pro horní orázek a ↓ pro dolní obrázek.</p>
+                <p style="text-align: -webkit-center;">{{set_obj.question_cz}} Můžeš použít klávesové zkratky, ↑ pro horní orázek a ↓ pro dolní obrázek.
+                        {% if set_obj.id == 2 %}
+                        
+                        Ukázky reálných obrázků: 
+                        <a style="display: contents;" href="/static/images/real_1.jpg" target="_blank">1</a>
+                        <a style="display: contents;" href="/static/images/real_2.jpg" target="_blank">2</a>
+                        <a style="display: contents;" href="/static/images/real_3.png" target="_blank">3</a>
+                        
+                        {% endif %}
+                </p>
 
 
                 <div class="container" style="width: max-content;min-width: 920px;">
