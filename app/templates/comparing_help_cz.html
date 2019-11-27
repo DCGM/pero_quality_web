@@ -7,7 +7,7 @@
         <div class="jumbotron my-auto" style="width: max-content; background-color: floralwhite;">
             <div class="container" style="width: max-content;    min-width: 920px;">
                 <h2 style="text-align: -webkit-center;">Porovnávání</h2>
-                <p style="text-align: -webkit-center; margin-bottom: auto;">{{set_obj.question_cz}} Můžeš použít klávesové zkratky, ↑ pro horní orázek a ↓ pro dolní obrázek.</p>
+                <p style="text-align: -webkit-center; margin-bottom: auto;">{{set_obj.question_cz}} Můžeš použít klávesové zkratky, ↑ pro vrchní orázek a ↓ pro spodní obrázek.</p>
                 <p style="text-align: -webkit-center;">
                         {% if set_obj.id == 2 %}
                         
@@ -19,15 +19,14 @@
                         {% endif %}
                 </p>
 
-
                 <div class="container" style="width: max-content;min-width: 920px;">
                         <div style="display: flex; margin-right: 10px; width: 100%;">
-                            <input id="{{ i }}" onclick="stop()" value="Lepší" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px; box-shadow: 0 0px 5px 3px rgb(21, 150, 0);"  disabled />
+                            <input id="{{ i }}" onclick="stop()" value="Vrchní" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px; box-shadow: 0 0px 5px 3px rgb(21, 150, 0); width: 96px;"  disabled />
                             <img id="img__{{ i }}" style="border-radius: 6px; min-width: 800px; max-width: 800px;width: 100%;margin-top: 5px;" class="img-rounded" src="/static/images/1.jpg" alt="Image for annotation">
 
                         </div>
                         <div style="display: flex; margin-right: 10px; width: 100%;">
-                            <input id="{{ i }}" onclick="stop()" value="Lepší" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;" disabled/>
+                            <input id="{{ i }}" onclick="stop()" value="Spodní" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;" disabled/>
                             <img id="img__{{ i }}" style="border-radius: 6px; min-width: 800px; max-width: 800px;width: 100%;margin-top: 5px;" class="img-rounded" src="/static/images/4.jpg" alt="Image for annotation">
                         </div>
                 </div>

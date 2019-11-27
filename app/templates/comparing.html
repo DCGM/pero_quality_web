@@ -62,7 +62,13 @@ window.onload = yourFunction;
 
                     {% for i, record_crop in record_crops %}
                         <div style="display: flex; margin-right: 10px; width: 100%;">
-                            <input id="{{ i }}" onclick="stop()" value="Better" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;"/>
+                            {% if i == 0%}
+                            <input id="{{ i }}" onclick="stop()" value="Top" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;width: 100px;"/>
+                            {% endif %}
+                            {% if i == 1%}
+                            <input id="{{ i }}" onclick="stop()" value="Bottom" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;"/>
+                            {% endif %}
+
                             <a id="img_{{ i }}" href="#">
                                 <img id="img__{{ i }}" style="border-radius: 6px; min-width: 800px; max-width: 800px;width: 100%;margin-top: 5px;" class="img-rounded" src="{{ url_for('main.get_crop', crop_id=record_crop.crop_id) }}" alt="Image for annotation">
                             </a>

@@ -62,7 +62,13 @@ window.onload = yourFunction;
 
                     {% for i, record_crop in record_crops %}
                         <div style="display: flex; margin-right: 10px; width: 100%;">
-                            <input id="{{ i }}" onclick="stop()" value="Lepší" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;"/>
+                            {% if i == 0%}
+                            <input id="{{ i }}" onclick="stop()" value="Vrchní" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;width: 96px;"/>
+                            {% endif %}
+                            {% if i == 1%}
+                            <input id="{{ i }}" onclick="stop()" value="Spodní" name="{{ i }}" type="submit" class="btn btn-success  btn-lg" style="margin:5px; margin-bottom: 5px;"/>
+                            {% endif %}
+
                             <a id="img_{{ i }}" href="#">
                                 <img id="img__{{ i }}" style="border-radius: 6px; min-width: 800px; max-width: 800px;width: 100%;margin-top: 5px;" class="img-rounded" src="{{ url_for('main.get_crop', crop_id=record_crop.crop_id) }}" alt="Image for annotation">
                             </a>
@@ -79,7 +85,7 @@ window.onload = yourFunction;
 
                 <div class="collapse" id="collapseExample" style="    max-width: 960px;">
                   <div class="card card-body">
-                    Můžeš použít klávesové zkratky, ↑ pro horní orázek a ↓ pro dolní obrázek.
+                    Můžeš použít klávesové zkratky, ↑ pro vrchní orázek a ↓ pro spodní obrázek.
                         {% if set_.id == 2 %}
                         
                         Ukázky reálných obrázků: 
